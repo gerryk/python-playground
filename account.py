@@ -1,5 +1,10 @@
 class Account(object):
     num_accs = 0
+
+    @staticmethod
+    def get_num_accs():
+        return Account.num_accs
+    
     def __init__(self,name):
         Account.num_accs += 1
         self.account_number = Account.num_accs
