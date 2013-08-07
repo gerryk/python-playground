@@ -32,11 +32,11 @@ def do_test(args, db):
 def main():
     import argparse
     parser = argparse.ArgumentParser('levelDB performance tests')
-    parser.add_argument('-d', '--db-path', default='./db', dest='dbpath', help='DB path')
-    parser.add_argument('-i', '--iterations', type=int, default=1000000, help='Number of writes')
+    parser.add_argument('-d', '--db-path', default='./db', dest='dbpath', help='DB path.')
+    parser.add_argument('-i', '--iterations', type=int, default=1000000, help='Number of writes.')
     parser.add_argument('-b', '--batch', action='store_true', help=
         "Use batch writes. May exhaust heap.")
-    parser.add_argument('-s', '--size', type=int, default=1, help="Data size multipler")
+    parser.add_argument('-s', '--size', type=int, default=1, help="Data size multiplier.")
     args = parser.parse_args()
     db = leveldb.LevelDB(args.dbpath)
     do_test(args, db)
